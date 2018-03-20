@@ -1,0 +1,134 @@
+#navbar ul {
+list-style-type: none;
+margin: 0px;
+padding: 0px;
+}
+
+#navbar ul li a {
+text-decoration: none;
+color: black;  
+}
+#navbar ul li a:hover {
+color: white;
+}
+
+#navbar ul li {
+font-family: Arial, Helvetica, sans-serif; 
+text-decoration: none;
+color: #000000;
+display: inline-block;
+width: 70px;
+height: 40px;
+margin: 10px;
+}
+
+#banner {
+background:url(./pieces/banner.png);
+position: absolute;
+margin-left: 0px;
+min-height: 193px;
+min-width: 183px;
+background-repeat: no-repeat
+}
+
+#title {
+position: absolute;
+background: url(./pieces/name.png);
+margin-left: 190px;
+min-height: 75px;
+min-width: 285px;
+}
+
+#navbar {
+position: relative;
+top: 80px;
+left: 210px;
+margin-left: inherit;
+}
+#social ul li{
+display: inline-block;
+width: 35px;
+height: 35px;
+margin: 5px;
+}
+#social {
+position: absolute;
+float: left;
+right: 180px;
+top: -5px;
+}
+#social ul {
+list-style-type: none;
+}
+
+#innerheader {
+height: 139px;
+width: 750px;
+margin-right: auto;
+margin-left: auto;
+position: relative;
+}
+
+#header {
+background:url(./pieces/headerBar.png);
+position: static;    
+width:100%;
+height:139px;
+padding:0;
+border:0;
+z-index: 10000;
+}
+
+#pagecenter {
+position: static;
+margin-right: auto;
+margin-left: auto;
+height: 50px;
+width: 750px;
+min-height: 1000px;
+background:url(./pieces/mainBG.png);
+background-position: center;
+background-repeat: no-repeat;
+background-attachment: fixed;
+margin-top: -19px;
+z-index:50
+}
+body {
+width: 100%;
+margin: 0px 0px 0px 0px;
+background-color: #808080
+}
+#footer {
+margin-top: 20px;
+padding-top: 30px;
+background: url(./pieces/footerbar.png);
+height: 77px;
+width: 100%;
+margin-right: auto;
+margin-left: auto;
+clear: both;
+bottom: 0px;
+position: static;
+}
+
+#footerbanner {
+background: url(./pieces/footerbanner.png);
+position: absolute;
+min-height: 95px;
+min-width: 90px;
+background-repeat: no-repeat;
+margin-top: -30px;
+}
+/* 
+.button {
+    background-color: green;
+    border: none;
+    color: white;
+    padding: 20px 300px;
+    text-align: center;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background: green; */
