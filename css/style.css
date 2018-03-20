@@ -1,3 +1,35 @@
+
+  
+  section, canvas {
+    padding: 30px;
+    border: 2px solid red;
+  }
+  
+  canvas {
+    height: 400px;
+    width: 600px;
+  }
+
+  .myList, ul, li {
+    list-style-type: none
+}
+
+* {
+    box-sized: border-box;
+}
+
+
+
+body, html {
+    background-color:#808080
+    height: 100%;
+    margin: 0px;
+    padding: 0;
+    width: 1005
+}
+
+
+
 h1 {
     font-size: 70px;
     text-align: center;
@@ -14,6 +46,11 @@ p {
 
 }
 
+section {
+    float: left;
+    width: 30%;
+  }
+
 ul #navbar {
 position: relative;
 top: 80px;
@@ -22,12 +59,18 @@ margin-left: inherit;
 list-style-type: none;
 }
 
+img {
+        border-radius: 50%;
+    }
+
+  
 
 
-body {
-width: 100%;
-margin: 0px 0px 0px 0px;
-background-color: #808080
+
+section, canvas {
+    padding: 30px
+    border: solid red;
+
 }
 
 
