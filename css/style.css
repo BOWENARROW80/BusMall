@@ -1,23 +1,85 @@
+body {
+    text-align: center;
+    background: lightseagreen;
 
-  
+}
+img {
+    border-radius: 50%;
+}
+
+productContainer {
+    float: left;
+    margin: 10px;
+    width: 20px;
+}
+
+
+* {
+    boxed-sized: border-box;
+}
+
   section, canvas {
     padding: 30px;
     border: 2px solid red;
   }
-  
-  canvas {
-    height: 400px;
-    width: 600px;
-  }
 
-  .myList, ul, li {
+
+#me-out {
+    height: 84px;
+}
+
+.table (
+    display: table;
+    margin: 0 auto;
+
+
+)
+
+ul#horizontal-list {
+    min-width: 696px;
+    list-style: none;
+    padding-top: 20px;
+}
+
+ul#horizontal-list li {
+    display: inline;
+}
+
+  ul, li {
     list-style-type: none
 }
 
-* {
-    box-sized: border-box;
+   ul {
+    float: left;
+   }
+    
+    #product-Container {
+    height: 200; 
+    width: 200;
+    }
+
+    .clickbox1, .clickbox2, .clickbox3 (
+    display: table;
+    margin: 0 auto;
+)
+
+.itemVotes {
+list-style: none
 }
 
+    .button {
+    background-color: green;
+    border: none;
+    color: white;
+    padding: 20px 300px;
+    text-align: center;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background: green;
+}
 
 
 body, html {
@@ -46,24 +108,8 @@ p {
 
 }
 
-section {
-    float: left;
-    width: 30%;
-  }
 
-ul #navbar {
-position: relative;
-top: 80px;
-left: 210px;
-margin-left: inherit;
-list-style-type: none;
-}
 
-img {
-        border-radius: 50%;
-    }
-
-  
 
 
 
@@ -72,17 +118,3 @@ section, canvas {
     border: solid red;
 
 }
-
-
-.button {
-    background-color: green;
-    border: none;
-    color: white;
-    padding: 20px 300px;
-    text-align: center;
-    font-size: 25px;
-    cursor: pointer;
-}
-
-.button:hover {
-    background: green;
