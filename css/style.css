@@ -5,10 +5,10 @@ header {
     margin-top: 30px;
 }
 
-header ul li (
+header ul li {
     font: Sans-serif;
     display: inline-block;
-)
+}
 
 ul, li {
     list-style-type: none
@@ -37,10 +37,10 @@ h1 {
 
 }
 
-.tilt.hover (
+.tilt:hover {
     transform: rotate(25deg);
 
-)
+}
 
 #pics {
     margin-top: 50%;
@@ -51,17 +51,18 @@ h1 {
 #pics img {
     border: 2px solid red;
     height: 200px;
-    margin-right: 30px
+    margin-right: 30px;
     width: 200px;
 
 }
+
 img {
     border-radius: 50%;
 }
 
 
 #pics h1{
-  margin-bottom; 30px;
+  margin-bottom: 30px;
   font-size: 20px;
 }
 

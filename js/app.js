@@ -26,6 +26,7 @@ Picture.prototype.percent = function() {
   return (this.clickCounter / this.showCounter) * 25;
 
 };
+
 /////change all these to picture vice 
 new Picture('bag', 'img/bag.jpg');
 new Picture('banana', 'img/banana.jpg');
@@ -57,19 +58,43 @@ function randomImage() {
   var secondImg = Math.floor(Math.random() * Picture.allImages.length);
   var thirdImg = Math.floor(Math.random() * Picture.allImages.length);
 
+  
+  
+  leftImg.alt = Picture.allImages[firstImg].name;
+  middleImg.alt = Picture.allImages[secondImg].name;
+  rightImg.alt = Picture.allImages[thirdImg].name;
+
   leftImg.src = Picture.allImages[firstImg].filepath;
   middleImg.src = Picture.allImages[secondImg].filepath;
   rightImg.src = Picture.allImages[thirdImg].filepath;
 
-  // Picture.allImages[indexArray[0]].shownCounter ++;
-  // Picture.allImages[indexArray[1]].shownCounter ++;
-  // Picture.allImages[indexArray[2]].shownCounter ++;
+  Picture.allImages[firstImg].timesDisplayed++;
+  Picture.allImages[secondImg].timesDisplayed++;
+  Picture.allImages[thirdImg].timesDisplayed++;
 }
 
 
 randomImage();
   
 
+
+
+function addClick(event) {
+  // var selected = event.target.getAttribute('src');
+randomImage();
+
+
+
+
+  // for (var i = 0; i < images_array.length; i++) {
+  //   if (selected ===images_array[i].filePath) {
+  //     images.array[i].clickCounter++;
+  //     globalClicks++;
+  //   }
+}
+leftImg.addEventListener('click', addClick);
+middleImg.addEventListener('click', addClick);
+rightImg.addEventListener('click', addClick);
 
 
 
@@ -88,15 +113,6 @@ randomImage();
 
 // }
 
-// function addClick(x) {
-//   var selected = x.target.getAttribute('src');
-
-//   for (var i = 0; i < images_array.length; i++) {
-//     if (selected ===images_array[i].filePath) {
-//       images.array[i].clickCounter++;
-//       globalClicks++;
-//     }
-//   }
 
 
 
@@ -349,7 +365,7 @@ randomImage();
 // }
 
 // // add event listener to the section
-// sectionElement.addEventListener('click', handleClick);
+// 
 
 // // render two images on page load
 // randomItem();
