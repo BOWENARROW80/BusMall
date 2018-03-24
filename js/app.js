@@ -1,21 +1,37 @@
 'use strict';
 
-
-
+Pics.clickableArea
 Picture.allImages = [];
 
+Picture.currentPic = [];
+picture.previousPicture = [];
 
-var allTheClicks = 0
-var leftImg = document.getElementById('left');
-var middleImg = document.getElementById('middle');
-var rightImg = document.getElementById('right');
+var pictureName = []
+
+var picVotes = [];
+
+var clickCounter = 0;
+
 
 function Picture(name, filepath) {
   this.name = name;
   this.filepath = filepath;
   this.timesDisplayed = 0;
   this.votes = 0;
-  Picture.allImages.push(this);
+  Picture.picNames.push(this.picName);
+
+
+  //make a new instance
+  function createInstance() {
+    // Save to LS
+    var picAsString = localStorage.hetItem(pictures);
+    var usablePics = JSON.parsel(picsAsString);
+    console.log('unsablepics', 'useablepics)';
+    if(useablePics && useablePics.legth) {
+      Pic.a\Pics = useablepIcs
+    console.log('inside if', picsAsStringPic);
+    }
+
 
 }
 
@@ -50,478 +66,145 @@ new Picture('usb', 'img/usb.gif');
 new Picture('water-can', 'img/water-can.jpg');
 
 console.log(Picture.allImages);
+for (var i = 0; i < images_array.length; i++) {
 
 
-function randomImage() {
-  
-  var firstImg = Math.floor(Math.random() * Picture.allImages.length);
-  var secondImg = Math.floor(Math.random() * Picture.allImages.length);
-  var thirdImg = Math.floor(Math.random() * Picture.allImages.length);
 
-  
-  
-  leftImg.alt = Picture.allImages[firstImg].name;
-  middleImg.alt = Picture.allImages[secondImg].name;
-  rightImg.alt = Picture.allImages[thirdImg].name;
+//add eventListener
+pics.clickableArea.addEventListener('click', clickHandler);
 
-  leftImg.src = Picture.allImages[firstImg].filepath;
-  middleImg.src = Picture.allImages[secondImg].filepath;
-  rightImg.src = Picture.allImages[thirdImg].filepath;
+var rightImg = document.getElementById('right');
+var middleImg = document.getElementById('middle');
+var leftImg = document.getElementById('left');
 
-  Picture.allImages[firstImg].timesDisplayed++;
-  Picture.allImages[secondImg].timesDisplayed++;
-  Picture.allImages[thirdImg].timesDisplayed++;
+function clickHandler(event) {
+  clickCounter ++;
+
+for(var i in pic.allPics){
+  if (event.target.alt === Pic.allPics[i].name){
+    pic.allPics[i].voteCounter++;
+  }
 }
 
 
-randomImage();
-  
-
-
-
-function addClick(event) {
-randomImage();
-
-}
-
+if (clickCounter >=25) {
+  pics.clickableArea.removeEventListender('click', clickHandler);
 leftImg.addEventListener('click', addClick);
 middleImg.addEventListener('click', addClick);
 rightImg.addEventListener('click', addClick);
 
+//update votes per pic
+summerizeTotals();
+
+//store them
+storeData();
 
 
-
-
-function showResults() {
-  console.log('You hit 25 clicks');
-  // create list items to display the number of times each image was displayed and the number of votes each one received
-  for(var i in Picture.allImages) {
-    // 1. target/create the element (li)
-    var listItemElement = document.createElement('li');
-   
-
-    function selectImgs(){
-
-  for(var i in Picture.allImages) {
-    if(event.target.alt === Picture.allImages[i].name) {
-      Picture.allImages[i].votes++;
-
-
-
-      
-function haltClicks() {
-  var picture = document.getElementById('pics');
-  if (globalClicks >=25) {
-    picture.style.display = 'none';
-    results();
-    
-  sectionElement.removeEventListener('click', handleclick)
-
-  }
-//if greater than 25 show results
-(showResults());
-
-//update votes per picture for chart
 updateVotes();
-
-//display the chart
 renderChart();
-
-
-
-
-function showResults() {
-  // console.log('You hit ten clicks');
-  // create list items to display the number of times each goat was displayed and the number of votes each one received
-for(var i in Picture.allImages) {
-    // 1. target/create the element (li)
-    var listItemElement = document.createElement('li');
-   
-    // 2. give it content
-    listItemElement.textContent = Picture.allImages[i].name + ' has ' + Picture.allImages[i].votes + ' votes and was displayed ' + Picture.allImages[i].timesDisplayed + ' times.';
-
-    // 3. append the element to its parent
-    unorderedListElement.appendChild(listItemElement);
-  }
+}
+else {
+  randomPic();
+}
+}
 
 function updateVotes() {
-  for(var i in Item.allItems) {
-    pictureVotes[i] = Picture.allItems[i].votes;
+  for (var i in Pic.allPics){
+    console.log('i', i);
+
   }
 }
 
-sectionElement.addEventListener('click', handleClick);
+function updateVotes(){
+  for(var i in Pic.allPics) {
+    console.log('i', i);
+    console.log('at i', Pic.allPics[i]);
+    picVotes.push(pic.allPics[i].coteCounter);
+    //picname goes here
+    picNames.push(Pic.allPics[i].name);
+  }
+  console.log('picvotes', picVotes);
+}
 
-//render images on page load
-randomImage();
+//callback function 
+function randomPic() {
+  var randomIndex = [];
 
+  var randomIndex1 = math.floor(math.random()= Pic.allPics.length);
+  var randomIndex2 = math.floor(math.random()= Pic.allPics.length);
+  var randomIndex3 = math.floor(math.random()= Pic.allPics.length);
 
+while(randomLeft === randomRight || Item.lastDisplayed.includes(randomLeft) || Item.lastDisplayed.includes(randomRight)
 
+console.log('Duplicate was caught!');
 
-
-// use Chart.js to create a bar chart
-function renderChart() {
-  // access the canvas element from the DOM
-  var context = document.getElementById('picture-chart').getContext('2d');
-
-  var arrayOfColors = ['red', 'green', 'yellow'];
-
-
-
-
-
-
-  function finish() {
-    // Save to LS
-    var savePictures = JSON.stringify(Picture.allPictures);
-    localStorage.setItem('pictures', savePictures);
-
-    toggleEventListener();
-    showChart();
+randomIndex1 = Math.floor(Math.random()= Pic.allPics.length);
+randomIndex2 = Math.floor(Math.random()= Pic.allPics.length);
+randomIndex3 = Math.floor(Math.random()= Pic.allPics.length);
 }
 
 
-
-
-
-
-
-    // // 2. give it content
-    // listItemElement.textContent = Picture.allImages[i].name + ' has ' + Picture.allImages[i].votes + ' votes and was displayed ' + Picture.allImages[i].timesDisplayed + ' times.';
-
-
-
-
-
-
-
-
-
-
-//   for (var i = 0; i < images_array.length; i++) {
-//     if (selected ===images_array[i].filePath) {
-//       images.array[i].clickCounter++;
-//       globalClicks++;
-//     }
-// }
-// leftImg.addEventListener('click', addClick);
-// middleImg.addEventListener('click', addClick);
-// rightImg.addEventListener('click', addClick);
-
-// function handleClick(event) {
-//   // increment click counter
-//   Item.totalClicks++;
-
-
-//     // 3. append the element to its parent
-//     unorderedListElement.appendChild(listItemElement);
-//   }
-// }
-
-// function updateVotes() {
-//   for(var i in Item.allItems) {
-//     // APPROACH 1:
-//     // goatVotes.push(Goat.allGoats[i].votes);
-
-//     // APPROACH 2:
-//     itemVotes[i] = Item.allItems[i].votes;
-//   }
-// }
-
-// // add event listener to the section
-
-
-// // render two images on page load
-// randomItem();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// ///////stop when rach 25 images; remove event listener when reach 25
-
-// ////prevent duplicates
-
-
-
-
-
-
-
-
-// // function selectImgs(){
-
-// //   for(var i in Picture.allImages) {
-// //     if(event.target.alt === Picture.allImages[i].name) {
-// //       Picture.allImages[i].votes++;
-// // }
-
-
-
-// //     }
-// //   }
-
-
-// // }
-
-
-
-
-// // haltClicks();
-// // render();
-// // }
-
-// //   }
-
-// //   function getPropVals() {
-// //     var values = []
-// //     for (var i = 0; i < images_array.length; i++) {
-// //       values.push(images_array[i][key]);
-
-// //     }
-// // return values;
-// //   }
-
-// //   function arrayOfColors() {
-// //     var arrayOfColors = ['red', 'green', 'yellow', "gold", "blue", "purple", "black", "pink", 'red', 'green', 'yellow', "gold", "blue", "purple", "black", "pink", 'red', 'green', 'yellow', "gold", "blue"]; 
-// //     // for (var i = 0; i < images_array; i++) {
-// //     //   while(randomLeft === randomRight || Item.lastDisplayed.includes(randomLeft) 
-// //     //   || Item.lastDisplayed.includes(randomRight)) {
-// //     // }
-// //   }
-
-// //   function renderChart() {
-// //     var context = document.getElementById('image-chart').getContext('2d');
-
-  
-    
-
-// //   var chart = new Chart(context, {
-// //     type: 'bar',
-// //     data: {
-// //       labels: getPropValues('name'), 
-// //       datasets: [{
-// //         label: 'Votes Per item',
-// //         data: getPropValues('clickCounter'),
-// //         backgroundColor: arrayOfColors,
-// //       }]
-// //     },
-// //     options: {
-// //       legend: (display, false),
-// //     title: {
-// //           title: {
-// //             fontColor: blue,
-// //             fontSize: 20px;
-// //             text: 'clicks per items'
-// //             beginAtZero: true
-        
-// //           }
-// //           }
-// //         }
-// //       }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// // // array to store instances of the Goat constructor
-// // Busmall.allItems = ['img/bag.jpg', 'img/bag.jpg','img/banana.png','img/bathroom.jpg','img/boots.jpg','img/breakfast.jpg', 'img/bubblegum.jpg','img/chair.jpg','img/cthulhu.jpg','img/dragon.jpg', 'img/win-glass.jpg', 'img/pen.png','img/pet-sweep.jpg','img/scissors.jpg', 'img/shark.jpg','img/sweep.jpg','img/tautaun.jpg', 'img/unicorn.jpg', 'img/usb.jpg', 'water-can', 'img/water-can.jpg' ]
-
-// // // array to keep track of the previously dispalyed images
-// // Busmall.lastDisplayed = [];
-
-// // // goat names for bar chart labels
-// // var itemNames = [];
-
-// // // goat votes for bar chart data
-// // var itemVotes = [];
-
-// // // click tracker
-// // Item.totalClicks = 0;
-
-// // // access the img elements from the DOM
-// // var rightImg = document.getElementById('right');
-// // var leftImg = document.getElementById('left');
-
-// // // access the section element from the DOM
-// // var sectionElement = document.getElementById('item-section');
-
-// // // access the unordered list element from the DOM
-// // var unorderedListElement = document.getElementById('results');
-
-// // // constructor function
-
-
-// // Picture.allPictures = [];
-
-// // //when
-// // //immediately
-// //   //Pro: they are there for next time
-// //   // CON: ZEROS
-// // //at the very end
-// // // Pro: stores all the values of clicks and views
-// // // Con: Partial data not captured
-// // //after a load and click
-// // //  PRO: COnsistant and acurate data
-// // //  CON: Potential scale issue with hug data
-// // //  con: chatter
-
-// // // make new Goat instances
-// // function setupPictures()
-
-// //   var picsAsString = localStorage.getItem('item');
-// //   varusablePics = JSON.parse(pics);
-// //   if ( usablePics && usablePics.length) {
-// //     picture.allpcitures = usablePics;
-// //     console.log('loaded from Local Storage');
-// //     return,
-// //   }
-
-// //   console.log('do it the hard way');
-// // {
-// //   new Item('bag', 'img/bag.jpg');
-// //   new Item('banana', 'img/banana.png');
-// //   new Item('bathroom', 'img/bathroom.jpg');
-// //   new Item('boots', 'img/boots.jpg');
-// //   new Item('breakfast', 'img/breakfast.jpg');
-// //   new Item('bubblegum', 'img/bubblegum.jpg');
-// //   new Item('chair', 'img/chair.jpg');
-// //   new Item('cthulhu', 'img/cthulhu.jpg');
-// //   new Item('dog-duck', 'img/dog-duck.jpg'); 
-// //   new Item('dragon', 'img/dragon.jpg');
-// //   new Item('wine-glass', 'img/win-glass.jpg');
-// //   new Item('pen', 'img/pen.png');
-// //   new Item('pet-sweep', 'img/pet-sweep.jpg');
-// //   new Item('scissors', 'img/scissors.jpg');
-// //   new Item('shark', 'img/shark.jpg');
-// //   new Item('sweep', 'img/sweep.jpg');
-// //   new Item('tautaun', 'img/tautaun.jpg');
-// //   new Item('unicorn', 'img/unicorn.jpg');
-// //   new Item('usb', 'img/usb.jpg'); 
-// //   new Item('water-can', 'img/water-can.jpg');
-// // }
-
-// // // randomly display two pictures
-
-// //   console.log(randomLeft);
-// //   console.log(randomRight);
-
-// //   // check to make sure that these random numbers are unique
-// //   // if there are duplicates, rerun both of the numbers
-// //   // Condition 1: randomLeft and randomRight are the same number/index
-// //   // Condition 2: randomLeft was previously displayed
-// //   // Condition 3: randomRight was previously displayed
- 
-// //     console.log('Duplicate was caught!');
-// //     randomLeft = Math.floor(Math.random() * Item.allItems.length);
-// //     randomRight = Math.floor(Math.random() * Goat.allItems.length);
-// //   }
-
-// //   // Now that we know they are unique numbers, display the two unique images on the screen
-// //   rightImg.src = Item.allItems[randomRight].filepath;
-// //   rightImg.alt = Item.allItems[randomRight].name;
-
-// //   leftImg.src = Item.allItems[randomLeft].filepath;
-// //   leftImg.alt = Item.allItems[randomLeft].name;
-
-// //   // incremented the number of times displayed
-// //   Item.allItems[randomLeft].timesDisplayed++;
-// //   Item.allItems[randomRight].timesDisplayed++;
-
-// //   // keep track of previously displayed images
-// //   // APPROACH 1: 
-// //   Item.lastDisplayed = [];
-// //   Item.lastDisplayed.push(randomLeft);
-// //   Item.lastDisplayed.push(randomRight);
-
-// //   // APPROACH 2:
-// //   Item.lastDisplayed[0] = randomLeft;
-// //   Item.lastDisplayed[1] = randomRight;
-
-// // }
-
-// // function handleClick(event) {
-// //   // increment click counter
-// //   Item.totalClicks++;
-
-// //   // increment clicks/votes on the specific image
-// //   console.log(event.target.alt);
-
-// //   // use a for loop to determine which goat img was actually clicked on
-
-
-// //   // check the click counter
-// //   if(Item.totalClicks > 25) {
-// //     // turn off event listener
-// //     sectionElement.removeEventListener('click', handleClick);
-
-// //     // if greater than 25, display results as a list
-// //     showResults();
-
-// //     // updates the votes per goat for chart
-// //     updateVotes();
-
-// //     // display the chart
-// //     renderChart();
-// //   } else {
-// //     // if less than 26, display a new set of random goat images
-// //     randomItem();
-// //   }
-// // }
-
-// // function showResults() {
-// //   // console.log('You hit ten clicks');
-// //   // create list items to display the number of times each goat was displayed and the number of votes each one received
-// //   for(var i in Item.allItems) {
-// //     // 1. target/create the element (li)
-// //     var listItemElement = document.createElement('li');
-   
-// //     // 2. give it content
-// //     listItemElement.textContent = Item.allItems[i].name + ' has ' + Item.allItems[i].votes + ' votes and was displayed ' + Item.allItems[i].timesDisplayed + ' times.';
-
-// //     // 3. append the element to its parent
-// //     unorderedListElement.appendChild(listItemElement);
-// //   }
-// // }
-
-// // function updateVotes() {
-// //   for(var i in Item.allItems) {
-// //     // APPROACH 1:
-// //     // goatVotes.push(Goat.allGoats[i].votes);
-
-// //     // APPROACH 2:
-// //     itemVotes[i] = Item.allItems[i].votes;
-// //   }
-// // }
-
-// // // add event listener to the section
-// // 
-
-// // // render two images on page load
-// // randomItem();
-
-// // // use Chart.js to create a bar chart
+pic.previousPics =[];
+pic.currentPic = [];
+
+leftImg.alt = Picture.allImages[firstImg].name;
+middleImg.alt = Picture.allImages[secondImg].name;
+rightImg.alt = Picture.allImages[thirdImg].name;
+Pic.allPics[randomIndex1].displayCounter++;
+Pic.currentPic.push[randomIndex1];
+
+
+leftImg.src = Picture.allImages[firstImg].filepath;
+middleImg.src = Picture.allImages[secondImg].filepath;
+rightImg.src = Picture.allImages[thirdImg].filepath;
+Pic.allPics[randomIndex1].displayCounter++;
+Pic.currentPic.push[randomIndex2];
+
+Picture.allImages[firstImg].timesDisplayed++;
+Picture.allImages[secondImg].timesDisplayed++;
+Picture.allImages[thirdImg].timesDisplayed++;
+Pic.allPics[randomIndex1].displayCounter++;
+Pic.currentPic.push[randomIndex3];
+
+Pic.previousPics.push.apply(Pic.previousPics, Pic.currentPic);
+}
+
+//create list of pictures
+createInstance();
+//call to display on page
+renderPic();
+
+//array of colors
+var arrayOfColors = ['red', 'green', 'yellow', 'blue', 'purple', "black", 'brown', 'orange', 'red', 'green', 'yellow', 'blue', 'purple', "black", 'brown', 'orange', 'red', 'green'];
+
+function renderChart(){
+  //save to local localStorage
+  var savePictures = JSON.stringify(Pic.allPics);
+  localStorage.setItem('pictures', savePictures);
+  console.log('picvotes in render', picVotes);
+
+//create the 2d chart
+var context = document.getElementById('results-chart').msGetInputContext('2d');
+new chart(context, {
+  type: 'bar',
+      data: {
+        labels: getPropValues('name'), 
+        datasets: [{
+          barPercentage: 0.01,
+          label: picName,
+          data: getPropValues('clickCounter'),
+          backgroundColor: arrayOfColors,
+        }]
+      },
+      options: {
+        legend: (display, false),
+      title: {
+            title: {
+              fontColor: blue,
+              fontSize: 20px;
+              text: 'clicks per items'
+          
+            }
+            }
+          }
+        }
